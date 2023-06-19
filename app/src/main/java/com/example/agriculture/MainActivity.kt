@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onResume() {
         super.onResume()
         binding.btnNext.setOnClickListener {
-            val intent = Intent(this, SignIn::class.java)
+            val intent = Intent(this, MainActivity2::class.java)
             startActivity(intent)
         }
         binding.btnPrevious.setOnClickListener {
