@@ -10,18 +10,19 @@ import com.example.agriculture.databinding.ActivitySignInBinding
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
 
+
 class SignIn : AppCompatActivity() {
+
     lateinit var binding: ActivitySignInBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding=ActivitySignInBinding.inflate(layoutInflater)
         setContentView(binding.root)
-//        setContentView(R.layout.activity_main)
-//        castViews()
 
     }
 
     override fun onResume() {
+        super.onResume()
         super.onResume()
         binding.btnSignUp.setOnClickListener {
             val intent = Intent(this, LogIn::class.java)
@@ -35,8 +36,8 @@ class SignIn : AppCompatActivity() {
 
         clearErrors()
         validateSignUp()
-
     }
+
 
     fun validateSignUp() {
         val FirstName = binding.etFirstName.text.toString()
@@ -81,7 +82,7 @@ class SignIn : AppCompatActivity() {
 
         }
         if (!error){
-            Toast.makeText(this,"$FirstName,$LastName,$Email", Toast.LENGTH_LONG).show()
+            Toast.makeText(this,"$FirstName,$LastName,$Email",Toast.LENGTH_LONG).show()
         }
     }
 
